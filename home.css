@@ -1,0 +1,161 @@
+.text-dark-red {
+    color: #8c0724 !important;
+}
+
+.bi-heart-pulse {
+    font-size: 4rem !important;
+}
+
+.navbar-brand i {
+    margin-right: 2px;
+}
+
+.navbar-brand span {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000000 !important;
+
+}
+
+.brand-title {
+    font-size: 3.3rem;
+    font-weight: bold;
+    color: #000 !important;
+}
+
+.brand-tagline {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5rem;
+    color: #8c0724;
+    letter-spacing: 1px;
+    margin-top: -4px;
+    margin-left: 2.2rem;
+    font-style: italic;
+}
+
+.navbar {
+    background: transparent !important;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background: rgb(156, 156, 156);
+}
+
+.topbar {
+    z-index: 998;
+}
+
+.nav-item {
+    font-size: 1.1rem;
+
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+
+.carousel-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 95vh;
+    position: relative;
+}
+
+.carousel-caption {
+    position: relative;
+    margin-left: 5%;
+    text-align: left;
+    color: white;
+    z-index: 1;
+    max-width: 500px;
+}
+
+.login-button {
+    background-color: #8c0724;
+    color: white;
+    padding: 8px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+
+.carousel-item-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: brightness(50%);
+
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+
+    transform: translateY(-50%);
+    text-align: left;
+    color: white;
+    z-index: 1;
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+        text-align: center;
+    }
+}
+
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+}
+
+.carousel-caption .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 10px;
+    background-color: #8c0724;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.carousel-caption .btn:hover {
+    background-color: #d20b36;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #8c0724;
+
+    color: white;
+    border-radius: 5px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+.carousel-inner {
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+}
+
+footer {
+    font-size: 0.9rem;
+}
