@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Photography Gallery</title>
+
+  <!-- AOS Library CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="gallery.css">
+
+
+</head>
+
+<body>
+
+  <!-- Category Buttons -->
+  <div class="category-buttons">
+    <button onclick="slideToCategory('wedding_photography', this)" class="active">Wedding Photography</button>
+    <button onclick="slideToCategory('fashion_photography', this)">Fashion Photography</button>
+    <button onclick="slideToCategory('product_photography', this)">Product Photography</button>
+    <button onclick="slideToCategory('travel_and_lifestyle_photography', this)">Travel & Lifestyle</button>
+  </div>
+
+  <!-- Gallery Container -->
+  <section id="gallary">
+    <div class="gallery" id="galleryContainer" data-aos="fade-up"></div>
+  </section>
+
+  <!-- AOS Library Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    const galleries = {
+      wedding_photography: [
+        "images/pwdd1.jpg", "images/pwdd2.jpg", "images/pwdd3.jpg",
+        "images/pwdd4.jpg", "images/pwdd5.jpg", "images/lwdd1.jpg",
+        "images/lwdd2.jpg", "images/lwdd3.jpg", "images/lwdd4.jpg", "images/lwdd5.jpg"
+      ],
+      fashion_photography: [
+        "images/pfashion1.jpg", "images/pfashion2.jpg", "images/pfashion3.jpg",
+        "images/pfashion4.jpg", "images/pfashion5.jpg", "images/lfashion1.jpg",
+        "images/lfashion2.jpg", "images/lfashion3.jpg", "images/lfashion4.jpg", "images/lfashion5.jpg"
+      ],
+      product_photography: [
+        "images/pproduct1.jpg", "images/pproduct2.jpg", "images/pproduct3.jpg",
+        "images/pproduct4.jpg", "images/pproduct5.jpg", "images/lproduct1.jpg",
+        "images/lproduct2.jpg", "images/lproduct3.jpg", "images/lproduct4.jpg", "images/lproduct5.jpg"
+      ],
+      travel_and_lifestyle_photography: [
+        "images/ptravel1.jpg", "images/ptravel2.jpg", "images/ptravel3.jpg",
+        "images/ptravel4.jpg", "images/ptravel5.jpg", "images/ltravel1.jpg",
+        "images/ltravel2.jpg", "images/ltravel3.jpg", "images/ltravel4.jpg", "images/ltravel5.jpg"
+      ]
+    };
+
+    function slideToCategory(category, buttonEl = null) {
+      const container = document.getElementById("galleryContainer");
+
+      container.classList.remove("slide-in");
+      container.classList.add("slide-out");
+
+      // Remove active class from all buttons
+      document.querySelectorAll('.category-buttons button').forEach(btn => btn.classList.remove("active"));
+      // Add active class to the clicked button
+      if (buttonEl) buttonEl.classList.add("active");
+
+      setTimeout(() => {
+        container.innerHTML = "";
+        if (!galleries[category]) return;
+
+        galleries[category].forEach((src, index) => {
+          const item = document.createElement("div");
+          item.className = "gallery-item";
+          item.setAttribute("data-aos", "zoom-in-up");
+          item.setAttribute("data-aos-delay", `${index * 100}`);
+
+          const img = document.createElement("img");
+          img.src = src;
+
+          const overlay = document.createElement("div");
+          overlay.className = "overlay";
+          overlay.innerHTML = `
+            <button onclick="enlargeImage(this)"><i class="bi bi-arrows-angle-expand"></i></button>
+            <button onclick="downloadImage(this)"><i class="bi bi-download"></i></button>
+          `;
+
+          item.appendChild(img);
+          item.appendChild(overlay);
+          container.appendChild(item);
+        });
+
+        container.classList.remove("slide-out");
+        container.classList.add("slide-in");
+
+        AOS.refresh(); // Refresh AOS for the newly added elements
+      }, 400); // Match the animation duration
+    }
+
+    function enlargeImage(button) {
+      const imgSrc = button.closest(".gallery-item").querySelector("img").src;
+      const lightbox = document.createElement("div");
+      lightbox.className = "lightbox";
+      lightbox.innerHTML = `<img src="${imgSrc}" />`;
+
+      lightbox.addEventListener("click", () => document.body.removeChild(lightbox));
+      document.body.appendChild(lightbox);
+    }
+
+    function downloadImage(button) {
+      const img = button.closest(".gallery-item").querySelector("img");
+      const link = document.createElement("a");
+      link.href = img.src;
+      link.download = img.src.split('/').pop();
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Load default category
+    window.onload = () => slideToCategory("wedding_photography", document.querySelector('.category-buttons button'));
+  </script>
+
+</body>
+
+</html>
