@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Hero</title>
+    <link rel="stylesheet" href="task_3.css " />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="padding-bottom: 70px;">
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow-sm">
+
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="text-danger bi bi-camera2 fs-1 me-3"></i>
+                <span class="fs-3 fw-bold text-dark">Pix<i class="bi bi-alexa"></i>Phile</span>
+                
+                <small class="brand-tagline" data-aos="fade-down" data-aos-delay="200">
+                    Emotions in every Pixel...
+                </small>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="100">
+                        <a class="nav-link" href="home.html" onclick="alert('You are on the Home page!')">
+                            <i class="bi bi-house-heart-fill me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="200">
+                        <a class="nav-link" href="#About">
+                            <i class="bi bi-file-earmark-person me-1"></i>About
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="300">
+                        <a class="nav-link" href="#Service">
+                            <i class="bi bi-check2-square me-1s"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="400">
+                        <a class="nav-link" href="#gallery"><i class="bi bi-images me-1"></i>Gallery</a>
+                    </li>
+
+                    <li class="nav-item" data-aos="fade-left" data-aos-delay="500">
+                        <a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill me-1"></i>Contact</a>
+                    </li>
+                    <li class="nav-item ms-md-3 mt-2 mt-md-0" data-aos="fade-left" data-aos-delay="600">
+                        <a href="login.html" class="btn btn-danger fw-semibold w-100 w-sm-auto">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div id="alertPlaceholder" class="container mt-3"></div>
+
+    <!-- Hero Carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slides -->
+            <div class="carousel-item active">
+                <div class="carousel-item-background" style="background-image: url('images/pic6.jpg');"></div>
+                <div class="carousel-caption">
+                    <div data-aos="fade-up" data-aos-duration="3000">
+                        <h2>Welcome to Pix<i class="bi bi-alexa"></i>Phile</h2>
+                        <p>Your Story, Beautifully Told Through Our Lens</p>
+                        <a href="contact.html" class="btn btn-danger">Contact us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-item-background" style="background-image: url('images/pic5.jpg');"></div>
+                <div class="carousel-caption">
+                    <div data-aos="fade-right" data-aos-duration="3000">
+                        <h2>Our Experts</h2>
+                        <p>We have the best photographers</p>
+                        <a href="#" class="btn btn-danger">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="carousel-item-background" style="background-image: url('images/pic2.jpg');"></div>
+                <div class="carousel-caption">
+                    <div data-aos="fade-left" data-aos-duration="3000">
+                        <h2>Quality Pictures</h2>
+                        <p>Providing Excellent People</p>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+    </div>
+
+
+    <!-- Bootstrap 5.3.5 JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js"></script>
+
+    <!-- Navbar Scroll Script -->
+    <script>
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > 90) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+
+
+
+    <<h1 class=" text-center mt-1" style="color: #8c0724;">Explore Our Gallery</h1>
+    <!-- Category Buttons -->
+    <div class="category-buttons text-center mt-2">
+        
+        <button onclick="slideToCategory('wedding_photography', this)" class="active">Wedding Photography</button>
+        <button onclick="slideToCategory('fashion_photography', this)">Fashion Photography</button>
+        <button onclick="slideToCategory('product_photography', this)">Product Photography</button>
+        <button onclick="slideToCategory('travel_and_lifestyle_photography', this)">Travel & Lifestyle</button>
+    </div>
+
+    <!-- Gallery Container -->
+    <section id="gallery" class="bg-black">
+        <div class="gallery" id="galleryContainer" data-aos="fade-up"></div>
+    </section>
+
+    <!-- AOS Library Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        const galleries = {
+            wedding_photography: [
+                "images/pwdd1.jpg", "images/pwdd2.jpg", "images/pwdd3.jpg",
+                "images/pwdd4.jpg", "images/pwdd5.jpg", "images/lwdd1.jpg",
+                "images/lwdd2.jpg", "images/lwdd3.jpg", "images/lwdd4.jpg", "images/lwdd5.jpg"
+            ],
+            fashion_photography: [
+                "images/pfashion1.jpg", "images/pfashion2.jpg", "images/pfashion3.jpg",
+                "images/pfashion4.jpg", "images/pfashion5.jpg", "images/lfashion1.jpg",
+                "images/lfashion2.jpg", "images/lfashion3.jpg", "images/lfashion4.jpg", "images/lfashion5.jpg"
+            ],
+            product_photography: [
+                "images/pproduct1.jpg", "images/pproduct2.jpg", "images/pproduct3.jpg",
+                "images/pproduct4.jpg", "images/pproduct5.jpg", "images/lproduct1.jpg",
+                "images/lproduct2.jpg", "images/lproduct3.jpg", "images/lproduct4.jpg", "images/lproduct5.jpg"
+            ],
+            travel_and_lifestyle_photography: [
+                "images/ptravel1.jpg", "images/ptravel2.jpg", "images/ptravel3.jpg",
+                "images/ptravel4.jpg", "images/ptravel5.jpg", "images/ltravel1.jpg",
+                "images/ltravel2.jpg", "images/ltravel3.jpg", "images/ltravel4.jpg", "images/ltravel5.jpg"
+            ]
+        };
+
+        function slideToCategory(category, buttonEl = null) {
+            const container = document.getElementById("galleryContainer");
+
+            container.classList.remove("slide-in");
+            container.classList.add("slide-out");
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.category-buttons button').forEach(btn => btn.classList.remove("active"));
+            // Add active class to the clicked button
+            if (buttonEl) buttonEl.classList.add("active");
+
+            setTimeout(() => {
+                container.innerHTML = "";
+                if (!galleries[category]) return;
+
+                galleries[category].forEach((src, index) => {
+                    const item = document.createElement("div");
+                    item.className = "gallery-item";
+                    item.setAttribute("data-aos", "zoom-in-up");
+                    item.setAttribute("data-aos-delay", `${index * 100}`);
+
+                    const img = document.createElement("img");
+                    img.src = src;
+
+                    const overlay = document.createElement("div");
+                    overlay.className = "overlay";
+                    overlay.innerHTML = `
+            <button onclick="enlargeImage(this)"><i class="bi bi-arrows-angle-expand"></i></button>
+            <button onclick="downloadImage(this)"><i class="bi bi-download"></i></button>
+          `;
+
+                    item.appendChild(img);
+                    item.appendChild(overlay);
+                    container.appendChild(item);
+                });
+
+                container.classList.remove("slide-out");
+                container.classList.add("slide-in");
+
+                AOS.refresh(); // Refresh AOS for the newly added elements
+            }, 400); // Match the animation duration
+        }
+
+        function enlargeImage(button) {
+            const imgSrc = button.closest(".gallery-item").querySelector("img").src;
+            const lightbox = document.createElement("div");
+            lightbox.className = "lightbox";
+            lightbox.innerHTML = `<img src="${imgSrc}" />`;
+
+            lightbox.addEventListener("click", () => document.body.removeChild(lightbox));
+            document.body.appendChild(lightbox);
+        }
+
+        function downloadImage(button) {
+            const img = button.closest(".gallery-item").querySelector("img");
+            const link = document.createElement("a");
+            link.href = img.src;
+            link.download = img.src.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Load default category
+        window.onload = () => slideToCategory("wedding_photography", document.querySelector('.category-buttons button'));
+    </script>
+    <br>
+    <br>
+    <!-- gallery end -->
+     <!-- map start -->
+  <h2 style="color:#8c0724; ">Pix<i class="bi bi-alexa"></i>Phile Photoshop Map</h2>
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 6,
+        center: { lat: 19.8762, lng: 75.3433 } // Centered on Chh. Sambhajinagar
+      });
+
+      // Chhatrapati Sambhajinagar location
+      const sambhajinagar = {
+        name: "Chhatrapati Sambhajinagar",
+        lat: 19.8762,
+        lng: 75.3433
+      };
+
+      const marker = new google.maps.Marker({
+        position: { lat: sambhajinagar.lat, lng: sambhajinagar.lng },
+        map,
+        title: sambhajinagar.name
+      });
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: `
+          <div>
+            <strong>${sambhajinagar.name}</strong><br>
+            <button onclick="getDirections(${sambhajinagar.lat}, ${sambhajinagar.lng})">
+              Get Directions
+            </button>
+          </div>
+        `
+      });
+
+      marker.addListener("click", () => {
+        infoWindow.open(map, marker);
+      });
+    }
+
+    // This function will get user location and open Google Maps with directions
+    function getDirections(destLat, destLng) {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const originLat = position.coords.latitude;
+            const originLng = position.coords.longitude;
+
+            const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${originLat},${originLng}&destination=${destLat},${destLng}&travelmode=driving`;
+
+            window.open(directionsUrl, '_blank');
+          },
+          (error) => {
+            alert("Error getting your location. Please allow location access.");
+          }
+        );
+      } else {
+        alert("Geolocation is not supported by your browser.");
+      }
+    }
+  </script>
+
+  <!-- Google Maps API -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGDs_JitqOlFttY4ebpKjEQCgXZg5URfI&callback=initMap">
+  </script>
+  <!-- map start -->
+    <!-- contact start -->
+
+
+
+
+    <!-- Background -->
+    <section id="contact">
+        <div class="background">
+        <div class="overlay"></div>
+
+        <!-- Layout -->
+        <div class="landscape-wrapper">
+
+            <!-- Info Panel -->
+            <div class="info-panel" data-aos="fade-right">
+                <h3 style="color: black;">Welcome to<span class="red"> Pix<i class="bi bi-alexa"></i>Phile</span></h3>
+                <p style="color: black;">Capture your special moments with our expert photography services. Whether it’s a wedding, event, or
+                    a
+                    portrait
+                    session, we ensure lasting memories in every frame.</p>
+            </div>
+
+            
+
+            <!-- Booking Form -->
+            <div class="booking-container" data-aos="zoom-in">
+                <h2 style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><i
+                        class=" bi bi-camera-fill fs-1 me-2"></i>Booking Form</h2>
+
+                <form id="booking-form" onsubmit="sendEmail(event)">
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+                        <!-- Row 1: Name + Email -->
+                        <div style="flex: 1 1 45%;">
+                            <label class="required-star">Name:</label>
+                            <input type="text" name="user_name" required>
+                        </div>
+                        <div style="flex: 1 1 45%;">
+                            <label class="required-star">Email:</label>
+                            <input type="email" name="user_email" required>
+                        </div>
+
+                        <!-- Row 2: Mobile + Venue -->
+                        <div style="flex: 1 1 45%;">
+                            <label class="required-star">Mobile Number:</label>
+                            <input type="tel" name="mobile" maxlength="10" minlength="10" pattern="\d{10}" required
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
+                        <div style="flex: 1 1 45%;">
+                            <label class="required-star">Event Venue:</label>
+                            <input type="text" name="venue" required>
+                        </div>
+
+                        <!-- Full-width fields -->
+                        <div style="flex: 1 1 100%;">
+                            <label>Event Name:</label>
+                            <textarea name="event_name" rows="2" required></textarea>
+                        </div>
+
+                        <div style="flex: 1 1 100%;">
+                            <label class="required-star">Choose Your Service:</label>
+                            <select name="service" required>
+                                <option value="">Select your Service</option>
+                                <option value="Wedding">Wedding Photography</option>
+                                <option value="Portrait">Portrait Photography</option>
+                                <option value="Fashion">Fashion Photography</option>
+                                <option value="Event">Event Photography</option>
+                                <option value="Product">Product Photography</option>
+                                <option value="Travel">Travel & Landscape Photography</option>
+                                <option value="Lifestyle">Lifestyle Photography</option>
+                            </select>
+                        </div>
+
+                        <div style="flex: 1 1 100%;">
+                            <label>Any Special Request:</label>
+                            <textarea name="request" rows="4" required></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit">Submit Booking</button>
+
+                </form>
+            </div>
+        </div>
+        </div>
+
+        <!-- AOS JS -->
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+
+            (function () {
+                emailjs.init("DDT5bxfzjA7IODYg4"); // Replace with your EmailJS public key
+            })();
+
+            function sendEmail(e) {
+                e.preventDefault();
+
+                const mobileInput = document.querySelector('input[name="mobile"]');
+                const mobileValue = mobileInput.value.trim();
+
+                if (!/^\d{10}$/.test(mobileValue)) {
+                    alert("Please enter a valid 10-digit mobile number.");
+                    mobileInput.focus();
+                    return;
+                }
+
+                emailjs.sendForm('service_6vxy5x7', 'template_4id65le', e.target)
+                    .then(() => {
+                        alert('Booking sent successfully!');
+                        setTimeout(() => {
+                            window.location.href = "thank-you.html";
+                        }, 100);
+                        //e.target.reset();
+                    }, (error) => {
+                        alert('Failed to send booking. Please try again.');
+                        console.error('EmailJS Error:', error);
+                    });
+            }
+        </script>
+    </section>
+
+    <!-- contact ends-->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-4 pb-3 mt-5">
+        <div class="container text-center">
+            <h5 class="fw-bold mb-2">Pix<i class="bi bi-alexa"></i>Phile</h5>
+            <p class="mb-2">Capturing moments, framing stories — one pixel at a time.</p>
+            <div class="d-flex justify-content-center mb-3"> <a href="https://www.facebook.com/"
+                    class="text-light me-3"><i class="bi bi-facebook fs-5"></i></a> <a href="https://x.com/"
+                    class="text-light me-3"><i class="bi bi-twitter fs-5"></i></a> <a href="https://www.instagram.com/"
+                    class="text-light me-3"><i class="bi bi-instagram fs-5"></i></a> <a href="https://www.linkedin.com/"
+                    class="text-light"><i class="bi bi-linkedin fs-5"></i></a> </div>
+            <div class="text-muted small"> Copyright &copy; <strong>Pix<i class="bi bi-alexa"></i>Phile</strong>. All
+                Rights Reserved.<br /> <strong>Pix<i class="bi bi-alexa"></i>Phile</strong> 2025. All rights
+                reserved.<br /> <span class="text-light">Designed with passion by <strong>Pix<i
+                            class="bi bi-alexa"></i>Phile</strong></span> </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>         AOS.init();     </script>
+</body>
+
+
+
+</html>
