@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snehal - Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2WbS1k9sFUFzO68D0qXEGykXZatFUT3Qm7+WvRbq0gD2TZ29y8VqZeoFXd5fRWf3y4aig=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+
+    <!-- AOS CSS -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        rel="stylesheet"
+    />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: rgb(0, 0, 33);
+            color: white;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        nav.nav-shadow {
+            box-shadow: 0 4px 12px rgba(144, 25, 146, 0.5);
+            background-color: rgba(0, 0, 0, 0.95);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            background-color: rgba(153, 153, 226, 0.1);
+        }
+
+        .left {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: rgb(153, 153, 226);
+            display: flex;
+            align-items: center;
+        }
+
+        nav .fas {
+            font-size: 1.1rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 100px;
+            margin: 80px 0;
+        }
+
+        .firstSection > div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+        }
+
+        .leftSection .button {
+            margin-top: 20px;
+        }
+
+        .leftSection .btn {
+            padding: 12px 20px;
+            background: rgb(142, 78, 201);
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .purple {
+            color: rgba(144, 25, 146, 0.748);
+        }
+
+        #element {
+            color: rgba(144, 25, 146, 0.748);
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(87, 27, 143);
+            height: 1px;
+            margin: 40px 84px;
+        }
+
+        .secondSection,
+        .projectSection,
+        .contactSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .projectSection .grid-item h3 {
+            margin-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .projectSection .grid-item p {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #444;
+        }
+
+        .projectSection h1,
+        .contactSection h1 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .contactSection form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contactSection input,
+        .contactSection textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .contactSection button {
+            padding: 12px;
+            background: rgb(142, 78, 201);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgb(58, 42, 112);
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav data-aos="fade-down">
+            <div class="left">
+                <i class="fas fa-laptop-code" style="margin-right: 8px;"></i>Snehal's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <a href="#home">
+                            <i class="fas fa-home" style="margin-right: 8px;"></i>Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#project">
+                            <i class="fas fa-project-diagram" style="margin-right: 8px;"></i>Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <i class="fas fa-envelope" style="margin-right: 8px;"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hey!!!! My name is <span class="purple">SNEHAL</span>
+                <div>and I am a</div>
+                <div>Web Developer.</div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <a href="https://github.com/Snehalankush9/pixophile" target="_blank">
+                        <button class="btn">
+                            <i class="fab fa-github" style="margin-right: 8px;"></i>Visit Github
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="d.png" alt="" />
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="projectSection" id="project">
+            <h1>My Projects</h1>
+
+            <!-- Project Grid -->
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>Portfolio Website</h3>
+                    <p>A responsive portfolio built using HTML, CSS, and JavaScript.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>To-Do App</h3>
+                    <p>A task management app with add and delete functionality.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Image Gallery</h3>
+                    <p>A filterable gallery using CSS Grid and JavaScript filters.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Movie revenue pridiction</h3>
+                    <p>Displays the revenue of that movie.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Quiz Game</h3>
+                    <p>Interactive multiple-choice quiz using vanilla JavaScript.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Blog Template</h3>
+                    <p>Minimal blog layout for writing and publishing content.</p>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div style="margin-top: 40px; text-align: center">
+                <h2>Connect With Me</h2>
+                <div style="margin-top: 15px">
+                    <a href="#" target="_blank" style="margin: 0 10px">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                            alt="GitHub"
+                            width="30"
+                        />
+                    </a>
+                    <a href="#" target="_blank" style="margin: 0 10px">
+                        <img
+                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                            alt="LinkedIn"
+                            width="30"
+                        />
+                    </a>
+                    <a href="#" target="_blank" style="margin: 0 10px">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                            alt="LeetCode"
+                            width="30"
+                            style="background: white; border-radius: 5px"
+                        />
+                    </a>
+                    <a href="https://www.geeksforgeeks.org/" target="_blank" style="margin: 0 10px">
+                        <img
+                            src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png"
+                            alt="GeeksforGeeks"
+                            width="30"
+                        />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <section class="contactSection" id="contact">
+            <h1>Contact Me</h1>
+            <form>
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2024 Snehal's Portfolio</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        var typed = new Typed("#element", {
+            strings: ["Web Developer", "Data Scientist", "Coder", "Software Developer"],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+        });
+
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener("scroll", function () {
+            const nav = document.querySelector("nav");
+            if (window.scrollY > 10) {
+                nav.classList.add("nav-shadow");
+            } else {
+                nav.classList.remove("nav-shadow");
+            }
+        });
+    </script>
+</body>
+
+</html>
